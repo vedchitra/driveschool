@@ -3,573 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> | Royal Driving School, Ajara</title>
+    <title>Royal Driving School  | रॉयल ड्रायविंग स्कूल </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
     
-    <meta name="description" content="Safe Driving, Safe Life">
-    <link rel="icon" type="image/x-icon" href="https://vedchitra.github.io/driveschool/assets/img_1163928.png">
-    <meta name="theme-color" content="#f39c12">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600;700&amp;family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="manifest" href="manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
     <style>
-         
         :root {
-            --primary: #f39c12;     
-            --primary-dark: #d35400;
-            --secondary: #2c3e50;   
-            --dark: #1a1a1a;       
-            --gray: #ecf0f1;        
-            --white: #ffffff;
-            --shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-
-        body {
-            font-family: 'Poppins', 'Mukta', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--gray);
-            color: var(--dark);
-            line-height: 1.6;
-            overscroll-behavior-y: none;
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; padding: 0; margin: 0; }
-        img { max-width: 100%; height: auto; }
-
-         
-        .top-bar {
-            background: var(--secondary);
-            color: #ecf0f1;
-            padding: 8px 5%;
-            font-size: 13px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid var(--primary);
+            --primary: #e67e22;  
+            --secondary: #2c3e50;  
+            --light: #f8f9fa;
+            --text: #333;
         }
         
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; color: var(--text); scroll-behavior: smooth; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; }
+        
          
-        .goog-te-banner-frame { display: none !important; }
-        body { top: 0px !important; }
-        .goog-te-gadget-simple { background: transparent !important; border: none !important; padding: 0 !important; font-size: 12px !important; color: #ccc !important; }
-        .goog-te-gadget-simple a { color: #fff !important; text-decoration: none !important; font-weight: bold; }
-        .goog-te-gadget-icon { display: none !important; }
-
-        .header-main {
-            background: var(--white);
-            padding: 20px 5%;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            position: relative;
-        }
-
-        .logo { width: 80px; margin-right: 20px; object-fit: contain; }
-
-        .site-title h1 {
-            margin: 0;
-            font-size: 28px;
-            color: var(--secondary);
-            text-transform: uppercase;
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: 0.5px;
-        }
-        .site-title h1 span { color: var(--primary); }  
-
-        .site-title p {
-            margin: 2px 0 0;
-            font-size: 14px;
-            color: #7f8c8d;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
+        .header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo-box { display: flex; align-items: center; gap: 10px; }
+        .logo-box img { height: 50px; }
+        .site-name h1 { margin: 0; font-size: 24px; color: var(--secondary); text-transform: uppercase; line-height: 1; }
+        .site-name p { margin: 0; font-size: 12px; color: var(--primary); font-weight: 600; }
+        
+        .nav-icons { display: flex; gap: 15px; align-items: center; }
+        .nav-icons a { font-size: 18px; color: var(--secondary); transition: 0.3s; }
+        .nav-icons a:hover { color: var(--primary); }
+        .login-btn { background: var(--secondary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; }
+        
+         
+        .navbar { background: var(--secondary); text-align: center; padding: 10px 0; }
+        .navbar a { color: white; margin: 0 15px; font-weight: 600; font-size: 14px; text-transform: uppercase; display: inline-block; padding: 5px 0; }
+        .navbar a:hover { color: var(--primary); }
 
          
-        .header-cta {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('');
+            background-size: cover; background-position: center; height: 500px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px;
         }
-        .cta-box { text-align: right; }
-        .cta-box span { display: block; font-size: 12px; color: #888; }
-        .cta-box strong { display: block; font-size: 18px; color: var(--secondary); }
-        .cta-icon { font-size: 24px; color: var(--primary); }
+        .hero h1 { font-size: 48px; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 20px; margin-bottom: 30px; }
+        .cta-btn { background: var(--primary); color: white; padding: 12px 30px; font-size: 18px; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+        .cta-btn:hover { background: #d35400; transform: translateY(-3px); }
 
          
-        .nav-wrapper {
-            background: var(--secondary);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: flex-start;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .nav a {
-            color: var(--white);
-            padding: 15px 25px;
-            font-weight: 600;
-            font-size: 15px;
-            display: block;
-            border-bottom: 4px solid transparent;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .nav a:hover, .nav a.active {
-            background-color: rgba(255,255,255,0.05);
-            border-bottom: 4px solid var(--primary);
-            color: var(--primary);
-        }
+        .section { padding: 60px 5%; max-width: 1200px; margin: 0 auto; }
+        .sec-title { text-align: center; font-size: 32px; color: var(--secondary); margin-bottom: 40px; font-weight: 700; }
+        .sec-title span { color: var(--primary); }
 
          
-        .menu-toggle-btn {
-            display: none;
-            background: none; border: none; color: white;
-            font-size: 24px; cursor: pointer; padding: 15px;
-        }
-        .mobile-header-flex { display: none; }
+        .about-wrap { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .about-text { flex: 1; min-width: 300px; font-size: 16px; line-height: 1.8; color: #555; }
+        .feature-box { flex: 1; min-width: 300px; background: var(--light); padding: 30px; border-radius: 10px; border-left: 5px solid var(--primary); }
+        .feature-item { display: flex; align-items: center; margin-bottom: 15px; font-weight: 600; color: var(--secondary); }
+        .feature-item i { color: var(--primary); margin-right: 15px; font-size: 18px; }
 
          
-        .container {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 20px;
-            min-height: 60vh;
-            background: transparent;
-        }
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .course-card { background: white; border: 1px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; text-align: center; padding: 30px 20px; position: relative; }
+        .course-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .course-icon { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
+        .course-title { font-size: 22px; color: var(--secondary); margin-bottom: 10px; font-weight: 700; }
+        .course-info { font-size: 14px; color: #777; margin-bottom: 15px; }
+        .course-fee { font-size: 28px; color: var(--secondary); font-weight: 800; margin-bottom: 20px; }
+        .enroll-btn { display: inline-block; border: 2px solid var(--secondary); color: var(--secondary); padding: 8px 20px; border-radius: 20px; font-weight: 600; }
+        .enroll-btn:hover { background: var(--secondary); color: white; }
 
          
-        .alert-bar {
-            background: var(--dark); 
-            color: white; 
-            display: flex; align-items: center;
-            font-size: 14px; font-weight: 500; overflow: hidden;
-            border-bottom: 3px solid var(--primary);
-        }
-        .alert-label { background: var(--primary); color: var(--white); padding: 10px 20px; text-transform: uppercase; font-weight: 800; z-index: 2; white-space: nowrap; }
-        .alert-content { padding: 10px; white-space: nowrap; animation: ticker 25s linear infinite; color: #f1f1f1; }
-        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: 0.3s; cursor: pointer; }
+        .gallery-item img:hover { transform: scale(1.03); filter: brightness(0.9); }
 
          
-        .footer {
-            background: var(--secondary);
-            color: #bdc3c7;
-            padding: 50px 20px 20px;
-            margin-top: 50px;
-            border-top: 6px solid var(--primary);
-        }
-        .footer h3 { color: white; border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block; margin-bottom: 20px; font-size: 18px; }
-        .footer a { color: #bdc3c7; display: block; margin-bottom: 10px; font-size: 14px; transition: 0.3s; }
-        .footer a:hover { color: var(--primary); padding-left: 5px; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center; font-size: 13px; }
+        .contact-wrap { display: flex; flex-wrap: wrap; gap: 30px; }
+        .contact-info { flex: 1; min-width: 300px; background: var(--secondary); color: white; padding: 40px; border-radius: 10px; }
+        .contact-item { display: flex; gap: 20px; margin-bottom: 25px; align-items: flex-start; }
+        .contact-item i { font-size: 24px; color: var(--primary); margin-top: 5px; }
+        .contact-map { flex: 1; min-width: 300px; height: 400px; background: #eee; border-radius: 10px; overflow: hidden; }
+        .contact-map iframe { width: 100%; height: 100%; border: 0; }
 
          
-        @media (max-width: 1024px) {
-            .nav-wrapper { padding: 0; }
-            .mobile-header-flex { display: flex; align-items: center; width: 100%; justify-content: space-between; background: var(--secondary); padding: 0 15px; box-sizing:border-box;}
-            .menu-toggle-btn { display: block; }
-            .menu-label { color: white; font-weight: bold; font-size: 16px; text-transform: uppercase; }
+        .footer { background: #1a1a1a; color: #999; padding: 50px 5% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer h3 { color: white; margin-bottom: 20px; font-size: 18px; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        .footer-links a { display: block; color: #bbb; margin-bottom: 10px; transition: 0.3s; }
+        .footer-links a:hover { color: var(--primary); padding-left: 5px; }
+        .footer-bottom { border-top: 1px solid #333; padding-top: 20px; text-align: center; font-size: 14px; }
 
-            .nav {
-                display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%;
-                background: var(--secondary); border-top: 1px solid rgba(255,255,255,0.1); padding: 0;
-            }
-            .nav.show-menu { display: flex; }
-            .nav a { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 20px; }
-            
-            .header-main { flex-direction: column; text-align: center; padding: 15px; }
-            .header-cta { display: none; }  
-            .logo { margin: 0 0 10px 0; width: 70px; }
-            .site-title h1 { font-size: 24px; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .header { flex-direction: column; gap: 10px; }
+            .nav-icons { margin-top: 10px; }
+            .navbar { overflow-x: auto; white-space: nowrap; }
         }
-
-         
-        .app-bar {
-            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 60px;
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));  
-            color: white; z-index: 9999;
-            align-items: center; justify-content: space-between; padding: 0 15px; box-sizing: border-box;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        .app-title { font-size: 18px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display:flex; align-items:center; gap:10px; }
-        .app-btn { background: none; border: none; color: white; font-size: 22px; cursor: pointer; padding: 5px; }
-
-         
-        .side-drawer-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 10000; backdrop-filter: blur(3px); }
-        .side-drawer {
-            position: fixed; top: 0; left: -280px; width: 280px; height: 100%; background: white; z-index: 10001;
-            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 2px 0 15px rgba(0,0,0,0.1); display: flex; flex-direction: column;
-        }
-        .drawer-header { background: var(--secondary); padding: 30px 20px; color: white; background-image: linear-gradient(135deg, var(--secondary) 0%, #34495e 100%); }
-        .drawer-header h2 { margin: 0; font-size: 22px; }
-        .drawer-links { padding: 10px 0; overflow-y: auto; flex: 1; }
-        .drawer-item { display: flex; align-items: center; gap: 15px; padding: 15px 20px; color: var(--secondary); font-weight: 500; border-bottom: 1px solid #f0f0f0; transition:0.2s; }
-        .drawer-item i { width: 25px; color: var(--primary); text-align: center; font-size: 18px; }
-        .drawer-item:hover { background: #fff8e1; color: var(--primary-dark); padding-left: 25px; }
-
-         
-        @media all and (display-mode: standalone) {
-            .top-bar, .header-main, .nav-wrapper, .footer { display: none !important; }
-            .app-bar { display: flex !important; }
-            .container { margin-top: 60px !important; padding: 15px !important; }
-            body { background: #f9f9f9; }
-        }
-
-         
-        #app-loader {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 20000;
-            display: none; flex-direction: column; align-items: center; justify-content: center;
-        }
-        .spinner {
-            border: 4px solid #f3f3f3; border-top: 4px solid var(--primary); border-radius: 50%; width: 45px; height: 45px; animation: spin 0.8s linear infinite;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
     </style>
 </head>
 <body>
 
-    <div class="app-bar">
-        <button class="app-btn" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
-        <div class="app-title">
-            <i class="fas fa-car"></i> 
-            Royal Driving School, Ajara        </div>
-        <button class="app-btn" onclick="toggleDrawer()"><i class="fas fa-bars"></i></button>
-    </div>
-
-    <div class="side-drawer-overlay" onclick="closeDrawer()"></div>
-    <div class="side-drawer" id="appDrawer">
-        <div class="drawer-header">
-            <h2><i class="fas fa-user-circle"></i> Menu</h2>
-            <div style="font-size:13px; opacity:0.8; margin-top:5px;">Welcome to Driving School</div>
-        </div>
-        <div class="drawer-links">
-            <a href="index.html" class="drawer-item"><i class="fas fa-home"></i> Home / Updates</a>
-            <a href="about.html" class="drawer-item"><i class="fas fa-info-circle"></i> About Us</a>
-            <a href="courses.html" class="drawer-item"><i class="fas fa-car"></i> Courses & Fees</a>
-            <a href="gallery.html" class="drawer-item"><i class="fas fa-images"></i> Photo Gallery</a>
-            <a href="contact.html" class="drawer-item"><i class="fas fa-phone-alt"></i> Contact Us</a>
-            <hr style="border:0; border-top:1px solid #eee; margin:10px 0;">
-            <a href="#" onclick="window.location.reload()" class="drawer-item"><i class="fas fa-sync-alt"></i> Refresh App</a>
-        </div>
-    </div>
-
-    <div id="app-loader">
-        <div class="spinner"></div>
-        <p style="margin-top:15px; color:#555; font-size:14px; font-weight:600;">Starting Engine...</p>
-    </div>
-
-    <div class="top-bar">
-        <div><i class="far fa-clock"></i> <span id="currentDate"></span></div>
-        <div style="display:flex; align-items:center; gap:15px;">
-             <div id="google_translate_element"></div>
-             <a href="#" style="color:#ecf0f1;"><i class="fab fa-facebook"></i></a>
-             <a href="#" style="color:#ecf0f1;"><i class="fab fa-instagram"></i></a>
-             <a href="#" style="color:#ecf0f1;"><i class="fab fa-whatsapp"></i></a>
-        </div>
-    </div>
-
-    <header class="header-main">
-                     <img src="https://vedchitra.github.io/driveschool/assets/img_1163928.png" alt="Logo" class="logo">
-                
-        <div class="site-title">
-            <h1>Royal Driving School, Ajara</h1>
-            <p>Safe Driving, Safe Life</p>
-        </div>
-
-        <div class="header-cta">
-            <div class="cta-box">
-                <span>Have Questions?</span>
-                <strong>7498663848</strong>
+    <header class="header">
+        <div class="logo-box">
+             <img src="https://vedchitra.github.io/driveschool/assets/img_1766465153.png" alt="Logo">             <div class="site-name">
+                <h1>Royal Driving School </h1>
+                <p>रॉयल ड्रायविंग स्कूल </p>
             </div>
-            <i class="fas fa-phone-square-alt cta-icon"></i>
+        </div>
+        <div class="nav-icons">
+                        <a href="#" class="login-btn"><i class="fas fa-user"></i> Login</a>
         </div>
     </header>
 
-    <div class="nav-wrapper">
-        <div class="mobile-header-flex">
-            <span class="menu-label"><i class="fas fa-bars" style="margin-right:5px;"></i> Menu</span>
-            <button class="menu-toggle-btn" onclick="toggleMobileMenu()"><i class="fas fa-chevron-down"></i></button>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>गाडी शिका </h1>
+        <p>वरील नवीन कोड अनुक्रमे त्या फाईल्समध्ये पेस्ट करा.</p>
+        <a href="" class="cta-btn"></a>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="sec-title">About <span>Us</span></h2>
+        <div class="about-wrap">
+            <div class="about-text">
+                वरील नवीन कोड अनुक्रमे त्या फाईल्समध्ये पेस्ट करा.वरील नवीन कोड अनुक्रमे त्या फाईल्समध्ये पेस्ट करा.वरील नवीन कोड अनुक्रमे त्या फाईल्समध्ये पेस्ट करा.            </div>
+            <div class="feature-box">
+                                    <div class="feature-item"><i class="fas fa-check-circle"></i> वरील नवीन कोड अनुक्रमे त्या फाईल्समध्ये पेस्ट करा.</div>
+                                    <div class="feature-item"><i class="fas fa-check-circle"></i> वरील नवीन कोड अनुक्रमे त्या फाईल्समध्ये पेस्ट करा.</div>
+                                    <div class="feature-item"><i class="fas fa-check-circle"></i> वरील नवीन कोड अनुक्रमे त्या फाईल्समध्ये पेस्ट करा.</div>
+                            </div>
         </div>
-        <nav class="nav" id="mainNavbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html" class="">About Us</a>
-            <a href="courses.html" class="">Courses & Fees</a>
-            <a href="gallery.html" class="">Gallery</a>
-            <a href="contact.html" class="">Contact</a>
-        </nav>
-    </div>
+    </section>
 
-    <div class="alert-bar">
-        <div class="alert-label">📢 Admissions Open</div>
-        <div class="alert-content">
-            New Batch starting next Monday! • Get 10% Discount on Full Payment • Learn 4-Wheeler & 2-Wheeler with Expert Trainers.
+    <section id="courses" class="section" style="background:#f9f9f9;">
+        <h2 class="sec-title">Our <span>Courses</span></h2>
+        <div class="course-grid">
+                        <div class="course-card">
+                <div class="course-icon"><i class="fas fa-car-side"></i></div>
+                <h3 class="course-title">4 wheelers</h3>
+                <div class="course-info">Duration: 21 D</div>
+                <div class="course-fee">₹1500</div>
+                <a href="#contact" class="enroll-btn">Join Now</a>
+            </div>
+                    </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2 class="sec-title">Photo <span>Gallery</span></h2>
+        <div class="gallery-grid">
+                    </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="sec-title">Contact <span>Us</span></h2>
+        <div class="contact-wrap">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><strong>Address:</strong><br>907, Ravalnath Colony, Ajara&lt;br&gt;Tal- Ajara</div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div><strong>Call:</strong><br>07498663848</div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div><strong>WhatsApp:</strong><br>7777777</div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div><strong>Email:</strong><br>vedchitragroups@gmail.com</div>
+                </div>
+            </div>
+            <div class="contact-map">
+                 </div>
         </div>
-    </div>
-
-    <main class="container">
-        <div id="updatesContainer" style="max-width:1100px; margin:0 auto; padding:10px; min-height:300px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
-          <div style="grid-column: 1/-1; text-align:center; padding:50px;"><i class="fas fa-steering-wheel fa-spin"></i> Loading Updates...</div>
-      </div>
-      <div class="pagination-wrapper" style="text-align:center; margin:30px 0; padding-bottom:30px;">
-          <button id="btnPrev" onclick="changePage(-1)" class="page-btn" disabled><i class="fas fa-chevron-left"></i> Prev</button>
-          <span id="pageInfo" style="margin:0 15px; font-weight:bold; color:#2c3e50;">Page 1</span>
-          <button id="btnNext" onclick="changePage(1)" class="page-btn">Next <i class="fas fa-chevron-right"></i></button>
-      </div>
-      <style>
-           
-          .update-card { 
-              background: white; border-radius: 12px; overflow: hidden; 
-              box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
-              border: 1px solid #eee; transition: transform 0.3s;
-              display: flex; flex-direction: column;
-          }
-          .update-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-          
-           
-          .update-thumb { width: 100%; height: 200px; background: #f9f9f9; display:flex; align-items:center; justify-content:center; overflow:hidden; }
-          .update-thumb img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-          .update-thumb:hover img { transform: scale(1.05); }
-          .update-thumb.placeholder { color: #ddd; font-size: 50px; }
-
-           
-          .update-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-          .badge { background: #ecf0f1; color: #2c3e50; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; text-transform:uppercase; }
-          
-          .update-title { margin: 10px 0; color: #2c3e50; font-size: 18px; line-height: 1.4; font-weight: 700; }
-          .update-desc { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 15px; flex-grow: 1; }
-          
-          .toggle-btn { background: none; border: none; color: #f39c12; cursor: pointer; font-weight: bold; padding: 0; font-size: 13px; text-align: left; }
-          .toggle-btn:hover { text-decoration: underline; color: #d35400; }
-
-           
-          .links-box { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #eee; }
-          .btn-link { display: inline-block; background: #2c3e50; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 12px; margin-right: 5px; margin-bottom: 5px; }
-          .btn-link:hover { background: #f39c12; }
-          
-           
-          .page-btn { background: #f39c12; color: white; border: none; padding: 10px 20px; border-radius: 30px; cursor: pointer; font-weight: bold; transition:0.3s; }
-          .page-btn:disabled { background: #eee; color:#aaa; cursor: not-allowed; }
-          .page-btn:hover:not(:disabled) { background: #d35400; box-shadow: 0 4px 10px rgba(243, 156, 18, 0.4); }
-      </style>
-        <script>
-            var allData = [{"title":"📢 नवीन बॅच १ तारखेपासून सुरू होत आहे!","desc":"तुम्हालाही एक्सपर्ट ड्रायव्हर बनायचे आहे का? मग वाट कसली बघताय? पुढील महिन्याच्या १ तारखेपासून नवीन मॉर्निंग आणि इव्हिनिंग बॅचेस सुरू होत आहेत. लेडीज आणि जेंट्ससाठी स्वतंत्र ट्रेनर्स उपलब्ध. मर्यादित जागा!","images":[],"links":[],"date":"12/22/2025, 3:53:46 PM"},{"title":"अभिनंदन! अनिकेत जाधव लायसन्स परीक्षा उत्तीर्ण.","desc":"आमच्या ड्रायव्हिंग स्कूलचे विद्यार्थी श्री. अनिकेत जाधव यांनी RTO ड्रायव्हिंग टेस्ट पहिल्याच प्रयत्नात यशस्वीरित्या पास केली. रॉयल ड्रायव्हिंग स्कूलतर्फे त्यांचे हार्दिक अभिनंदन आणि पुढील प्रवासासाठी शुभेच्छा!","images":["https://vedchitra.github.io/driveschool/assets/img_5486867.png"],"links":[],"date":"12/22/2025, 3:52:45 PM"}];
-            var currentPage = 1;
-            var perPage = 20; 
-            
-            function renderUpdatesPage(page) {
-                var start = (page - 1) * perPage;
-                var end = start + perPage;
-                var listToDisplay = allData.slice(start, end);
-                
-                var container = document.getElementById('updatesContainer');
-                container.innerHTML = ''; 
-
-                if(listToDisplay.length === 0) {
-                    container.innerHTML = '<div style="text-align:center; padding:40px; color:#777;">No updates currently available.</div>';
-                    return;
-                }
-
-                listToDisplay.forEach((item, index) => {
-                     var realIndex = start + index;
-                     var dateStr = item.date ? item.date.split(',')[0] : '';
-                     
-                     var imageHtml = "";
-                     if (item.images && item.images.length > 0) {
-                         imageHtml = '<div class="update-thumb"><img src="' + item.images[0] + '" loading="lazy"></div>';
-                     } else {
-                         
-                         imageHtml = '<div class="update-thumb placeholder"><i class="fas fa-car-side"></i></div>';
-                     }
-
-                     var linksHtml = "";
-                     if (item.links && item.links.length > 0) {
-                         linksHtml += '<div class="links-box">';
-                         item.links.forEach(l => {
-                             linksHtml += '<a href="' + l.url + '" target="_blank" class="btn-link"><i class="fas fa-external-link-alt"></i> ' + l.text + '</a> ';
-                         });
-                         linksHtml += '</div>';
-                     }
-                     
-                     var descId = "desc_" + realIndex;
-                     var fullDesc = item.desc.replace(/\n/g, '<br>');
-                     var shortDesc = fullDesc.substring(0, 120) + "...";
-                     var isLong = fullDesc.length > 120;
-                     
-                     var readMoreHtml = isLong ? 
-                        '<button onclick="toggleDesc(\'' + descId + '\')" class="toggle-btn" id="btn_' + descId + '">Read More</button>' : '';
-
-                     
-                     var cardHtml = 
-                      '<div class="update-card">' +
-                          imageHtml +
-                          '<div class="update-body">' +
-                              '<div class="update-meta"><span class="badge"><i class="far fa-calendar-alt"></i> ' + dateStr + '</span></div>' +
-                              '<h3 class="update-title">' + item.title + '</h3>' +
-                              '<div class="update-desc">' +
-                                  '<span id="short_' + descId + '">' + (isLong ? shortDesc : fullDesc) + '</span>' +
-                                  '<span id="full_' + descId + '" style="display:none;">' + fullDesc + '</span>' +
-                              '</div>' +
-                              readMoreHtml +
-                              linksHtml +
-                          '</div>' +
-                      '</div>';
-                      
-                      container.innerHTML += cardHtml;
-                });
-                
-                
-                document.getElementById('pageInfo').innerText = 'Page ' + page + ' of ' + Math.ceil(allData.length / perPage);
-                document.getElementById('btnPrev').disabled = (page === 1);
-                document.getElementById('btnNext').disabled = (end >= allData.length);
-                
-                if(page > 1) {
-                    document.getElementById('updatesContainer').scrollIntoView({behavior: 'smooth'});
-                }
-            }
-            
-            function changePage(dir) {
-                currentPage += dir;
-                renderUpdatesPage(currentPage);
-            }
-
-            function toggleDesc(id) {
-              var short = document.getElementById('short_' + id);
-              var full = document.getElementById('full_' + id);
-              var btn = document.getElementById('btn_' + id);
-              
-              if(full.style.display === 'none') {
-                  full.style.display = 'inline';
-                  short.style.display = 'none';
-                  btn.innerText = 'Show Less';
-              } else {
-                  full.style.display = 'none';
-                  short.style.display = 'inline';
-                  btn.innerText = 'Read More';
-              }
-            }
-            
-            window.onload = function() { renderUpdatesPage(1); };
-        </script>
-              
-        <div id="install-app-card" style="display:none; background:white; color:var(--dark); padding:25px; border-radius:12px; margin-top:40px; text-align:center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-top: 5px solid var(--primary);">
-            <i class="fas fa-mobile-alt" style="font-size:40px; color:var(--primary); margin-bottom:10px;"></i>
-            <h3 style="margin:5px 0 10px; color:var(--secondary);">Download Our App</h3>
-            <p style="font-size:14px; color:#777; margin-bottom:20px;">Get updates on your driving schedule and license status directly on your phone.</p>
-            <button id="installBtn" style="background:var(--primary); color:white; border:none; padding:12px 30px; font-weight:bold; border-radius:50px; cursor:pointer; font-size:14px; box-shadow: 0 4px 10px rgba(243, 156, 18, 0.4);">
-                <i class="fas fa-download"></i> Install App
-            </button>
-        </div>
-    </main>
+    </section>
 
     <footer class="footer">
-        <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:40px;">
-            
+        <div class="footer-grid">
             <div>
-                <h3><i class="fas fa-map-marker-alt" style="color:var(--primary); margin-right:5px;"></i> Find Us</h3>
-                <p style="font-size:14px; color:#bdc3c7; line-height:1.8;">
-                    Trusted by thousands of students for safe driving training.<br>
-                    <strong>Address:</strong> Near Bus Stand, Main Road, City.
-                </p>
+                <h3>Royal Driving School </h3>
+                <p>Driving safe since 2025. Your partner in road safety.</p>
             </div>
-
             <div>
-                <h3>Quick Links</h3>
-                                                            <a href="#"><i class="fas fa-angle-right"></i> Car Training</a>
-                                            <a href="#"><i class="fas fa-angle-right"></i> Bike Training</a>
-                                            <a href="#"><i class="fas fa-angle-right"></i> License Renewal</a>
-                                                </div>
-
-             <div>
-                <h3>RTO Info</h3>
-                                                                 </div>
-
+                <h3></h3>
+                <div class="footer-links">
+                                    </div>
+            </div>
+            <div>
+                <h3></h3>
+                <div class="footer-links">
+                                    </div>
+            </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2025 <strong>Royal Driving School, Ajara</strong>. Designed for Safety.</p>
+            &copy; 2025 Royal Driving School . All Rights Reserved.
         </div>
     </footer>
-
-    <script>
-        
-        const d = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
-        document.getElementById("currentDate").innerText = d.toLocaleDateString('en-IN', options);
-
-        
-        function toggleMobileMenu() {
-            document.getElementById("mainNavbar").classList.toggle("show-menu");
-        }
-
-        
-        function toggleDrawer() {
-            document.getElementById("appDrawer").style.left = "0";
-            document.querySelector(".side-drawer-overlay").style.display = "block";
-        }
-        function closeDrawer() {
-            document.getElementById("appDrawer").style.left = "-280px";
-            document.querySelector(".side-drawer-overlay").style.display = "none";
-        }
-        function goBack() {
-            closeDrawer();
-            if(window.history.length > 1) { window.history.back(); } 
-            else { window.location.href = 'index.html'; }
-        }
-
-        
-        let deferredPrompt;
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            
-            if (!window.matchMedia('(display-mode: standalone)').matches) {
-                document.getElementById('install-app-card').style.display = 'block';
-            }
-        });
-
-        document.getElementById('installBtn').addEventListener('click', async () => {
-            if (deferredPrompt) {
-                deferredPrompt.prompt();
-                const { outcome } = await deferredPrompt.userChoice;
-                if (outcome === 'accepted') {
-                    document.getElementById('install-app-card').style.display = 'none';
-                }
-                deferredPrompt = null;
-            }
-        });
-
-        
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js');
-        }
-    </script>
-    
-    <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,hi,mr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-    }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
